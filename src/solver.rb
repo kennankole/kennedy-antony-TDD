@@ -4,23 +4,25 @@
 class Solver
   def initialize; end
 
-  def factorial(a)
-    return 1 if a == 0
-    raise "Negative values not allowed" if a < 0
-    a * factorial(a - 1)
+  def factorial(num)
+    return 1 if num.zero?
+    raise 'Negative values not allowed' if num.negative?
+
+    num * factorial(num - 1)
   end
 
   def reverse(word)
     answer = []
-    word.split("").each do |str|
+    word.split('').each do |str|
       answer.unshift(str)
     end
-    return answer.join("")
+    answer.join('')
   end
 
-  def fizzbuzz(n)
-    return "fizz" if n % 3 == 0
-    return "buzz" if n % 5 == 0
+  def fizzbuzz(num)
+    return 'fizzbuzz' if (num % 5).zero? && (num % 3).zero?
+    return 'fizz' if (num % 3).zero?
+    return 'buzz' if (num % 5).zero?
+    return num.to_s if num % 3 != 0 || n % 5 != 0
   end
 end
-
