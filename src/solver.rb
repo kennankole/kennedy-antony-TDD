@@ -5,13 +5,17 @@ class Solver
   def initialize; end
 
   def factorial(a)
-    return 1 if a == 0 || a == 1
+    return 1 if a == 0
     raise "Negative values not allowed" if a < 0
     a * factorial(a - 1)
   end
 
-  def reverse
-    'I am reverse'
+  def reverse(word)
+    answer = []
+    word.split("").each do |str|
+      answer.unshift(str)
+    end
+    return answer.join("")
   end
 
   def fizzbuzz
@@ -19,4 +23,4 @@ class Solver
   end
 end
 
-puts Solver.new.factorial(5)
+puts Solver.new.factorial(8)
