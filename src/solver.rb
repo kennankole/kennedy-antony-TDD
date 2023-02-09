@@ -18,9 +18,8 @@ class Solver
     return answer.join("")
   end
 
-  def fizzbuzz
+  def fizzbuzz(n)
+    return "fizz" if n % 3 == 0
     'I am fizzbuzz'
   end
 end
-
-puts Solver.new.factorial(8)
