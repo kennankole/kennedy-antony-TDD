@@ -13,10 +13,10 @@ class Solver
 
   def reverse(word)
     answer = []
-    word.split('').each do |str|
+    word.chars.each do |str|
       answer.unshift(str)
     end
-    answer.join('')
+    answer.join
   end
 
   def fizzbuzz(num)
@@ -26,3 +26,4 @@ class Solver
     return num.to_s if num % 3 != 0 || n % 5 != 0
   end
 end
+
