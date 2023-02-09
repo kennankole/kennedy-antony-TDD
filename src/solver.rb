@@ -1,9 +1,6 @@
-# frozen_string_literal: true
 
 # A class that has factorial, reverse, and fizzbuzz methods
 class Solver
-  def initialize; end
-
   def factorial(num)
     return 1 if num.zero?
     raise 'Negative values not allowed' if num.negative?
@@ -26,4 +23,3 @@ class Solver
     return num.to_s if num % 3 != 0 || n % 5 != 0
   end
 end
-

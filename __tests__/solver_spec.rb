@@ -1,10 +1,9 @@
-# frozen_string_literal: true
 
 require 'rspec'
 require('./src/solver')
 
-solve = Solver.new
 describe Solver do
+  solve = Solver.new
   it 'Should return 1 if number is 0 or 1' do
     expect(solve.factorial(0)).to eq(1)
   end
