@@ -23,3 +23,4 @@ class Solver
     return "buzz" if n % 5 == 0
   end
 end
+
