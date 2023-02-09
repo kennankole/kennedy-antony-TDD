@@ -1,4 +1,3 @@
-
 # A class that has factorial, reverse, and fizzbuzz methods
 class Solver
   def factorial(num)
