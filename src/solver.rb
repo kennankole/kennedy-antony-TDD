@@ -5,7 +5,8 @@ class Solver
   def initialize; end
 
   def factorial(a)
-    return 1 if a <= 1
+    return 1 if a == 0 || a == 1
+    raise "Negative values not allowed" if a < 0
     a * factorial(a - 1)
   end
 
