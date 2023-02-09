@@ -32,5 +32,11 @@ describe Solver do
     it "Multiples of 5" do
       expect(solve.fizzbuzz(25)).to eq "buzz"
     end
+    it "Multiples of 5 and 3" do
+      expect(solve.fizzbuzz(15)).to eq "fizzbuzz"
+    end
+    it "Not a multiple of 3 and 5" do
+      expect(solve.fizzbuzz(7)).to eq "7"
+    end
   end
 end
