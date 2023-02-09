@@ -3,9 +3,9 @@
 require 'rspec'
 require('./src/solver')
 
+solve = Solver.new
 describe Solver do
-  context 'When testing the solver class' do
-    solve = Solver.new
+  context 'When testing the factorial method' do
     it "Should return 1 if number is 0 or 1" do 
       expect(solve.factorial(0)).to eq(1)
     end
@@ -17,15 +17,16 @@ describe Solver do
     it "Should raises an exception for non-positive values " do
       expect { solve.factorial(-1) }.to raise_error(RuntimeError, "Negative values not allowed")
     end
-
+  end
+  context "When testing the reverse method" do 
     it "Reverses a string" do
       expect(solve.reverse('hello')).to eq 'olleh'
     end
+  end
 
-    it "The fizzbuz method should return 'I am fizzbuzz' " do
-      fizz = Solver.new
-      message = fizz.fizzbuzz
-      expect(message).to eq 'I am fizzbuzz'
+  context "When testing the fizzbuzz method" do
+    it "Multiples of 3" do
+      expect(solve.fizzbuzz(9)).to eq "fizz"
     end
   end
 end
