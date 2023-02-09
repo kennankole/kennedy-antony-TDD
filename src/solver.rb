@@ -20,6 +20,5 @@ class Solver
 
   def fizzbuzz(n)
     return "fizz" if n % 3 == 0
-    'I am fizzbuzz'
   end
 end

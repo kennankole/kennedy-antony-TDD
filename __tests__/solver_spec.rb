@@ -28,5 +28,9 @@ describe Solver do
     it "Multiples of 3" do
       expect(solve.fizzbuzz(9)).to eq "fizz"
     end
+
+    it "Multiples of 5" do
+      expect(solve.fizzbuzz(25)).to eq "buzz"
+    end
   end
 end
